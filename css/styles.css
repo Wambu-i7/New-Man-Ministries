@@ -12,6 +12,13 @@
     color: #333;
     background-color: #f9f9f9;
   }
+
+  section {
+    scroll-margin-top: 110px; /* Adjust to your header height */
+  }
+  #home {
+   padding-top: -25px;
+  }
   
   .container {
     width: 90%;
@@ -43,24 +50,21 @@
     font-weight: bold;
     color: #ffcc00; /* yellow accent */
     text-decoration: none;
-    margin-left: 0;
+    margin-right: auto;
   }
   
   .logo-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-left: -82px;
+    margin-bottom: -10px;
     object-fit: cover;
   }
   .logo-text {
     color: orange;
     font-size: 1.5rem;
     font-weight: bold;
-  }
-
-  .logo a {
-    text-align: left;
   }
   nav ul {
     list-style: none;
@@ -81,6 +85,8 @@
   
   
   /* Hero section */
+  
+  
   
   .hero {
     height: 100vh;
@@ -108,6 +114,39 @@
     margin-right: auto;
     color: white;
   }
+  .image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap; /* for responsiveness */
+  }
+  
+  .left-info, .right-info {
+    flex: 1;
+    min-width: 200px;
+    
+  }
+  
+  .left-info p {
+    margin: 8px 0;
+    text-align: center;
+    color: #d1e709e7;
+    font-size:x-large;
+  }
+  .left-info h3 {
+    color: #e6b800;
+    font-size: 25px;
+  }
+  .left-info h2 {
+    color: #e75b09;
+    font-size: 35px;
+  }
+  .right-info p {
+    color: rgb(250, 246, 6);
+    font-size: 30px;
+  }
   
   .preacher-image {
     text-align: center;
@@ -129,24 +168,30 @@
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
+    margin: 55px 0;
   }
   
   .btn-primary:hover {
     background-color: #002244;
+   
   }
   
   /* Sermons */
   
   .sermons {
-    padding: 60px 0;
+    padding: 10px 0;
     background-color: white;
     text-align: center;
+    height: 100vh;
+    
   }
   
   .sermons h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     margin-bottom: 40px;
     color: #003366;
+    border: #003366;
+    padding-top: 5px;
   }
   
   .sermon-list {
@@ -181,6 +226,13 @@
     color: #666;
     margin-bottom: 12px;
   }
+  .sermon-thumbnail {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
   
   .btn-secondary {
     background-color: #ffcc00;
