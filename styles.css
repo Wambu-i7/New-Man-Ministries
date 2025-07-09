@@ -212,7 +212,7 @@
   .sermon img {
     width: 100%;
     border-radius: 6px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
   
   .sermon h3 {
@@ -227,7 +227,7 @@
   }
   .sermon-thumbnail {
     width: 400px;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
     border-radius: 5px;
   }
