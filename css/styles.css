@@ -14,7 +14,7 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #a3a2a2;
-    background-color: black;
+    background-color: white;
   }
 
   section {
@@ -106,7 +106,7 @@
   .hero-content h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
-    color: white;
+    color: #574605;
   }
   
   .hero-content p {
@@ -115,7 +115,7 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    color: white;
+    color: black;
   }
   .image-row {
     display: flex;
@@ -135,11 +135,11 @@
   .left-info p {
     margin: 8px 0;
     text-align: center;
-    color: #d1e709e7;
+    color: black;
     font-size:x-large;
   }
   .left-info h3 {
-    color: #e6b800;
+    color: black;
     font-size: 25px;
   }
   .left-info h2 {
@@ -147,7 +147,7 @@
     font-size: 35px;
   }
   .right-info p {
-    color: rgb(250, 246, 6);
+    color: black;
     font-size: 30px;
   }
   
@@ -186,7 +186,7 @@
   .sermons h2 {
     font-size: 2.8rem;
     margin-bottom: 40px;
-    color: white;
+    color: black;
     border: #003366;
     padding-top: 5px;
     text-align: center;
@@ -194,7 +194,7 @@
   
   .sermon-list {
     display: flex;
-    gap: 40px;
+    gap: 100px;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -225,8 +225,8 @@
     margin-bottom: 12px;
   }
   .sermon-thumbnail {
-    width: 300px;
-    height: 180px;
+    width: 400px;
+    height: 150px;
     object-fit: cover;
     border-radius: 5px;
   }
@@ -256,14 +256,15 @@
   
 .about {
   padding: 10px 20px;
-  color: white;
+  color: black;
   text-align: center;
+  background-color: white;
 }
 
 .about h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: white;
+  color: black;
 }
 
 .ministry-grid {
@@ -274,12 +275,13 @@
 }
 
 .ministry-card {
-  background-color:rgb(7, 116, 218);
-  border-width: 20px;
+  background-color: #ffcc00;
+  border-width: 90px;
   box-shadow: 0 2px 8px rgba(19, 64, 212, 0.1);
   overflow: hidden;
   width: 300px;
   text-align: center;
+  border-radius: 20px;
 }
 
 .ministry-img {
@@ -301,65 +303,111 @@
 }
 
   .about h2, .contact h2 {
-    color: white;
+    color: black;
     margin-bottom: 15px;
     font-size: 2.5rem;
     
   }
   .about h3 {
     font-size: 1.5rem;
-    color: white;
+    color: black;
   }
   
   .about p, .contact p {
     max-width: 700px;
     margin: 0 auto;
-    color: white;
+    color: black;
     font-size: 1.1rem;
     line-height: 1.5;
   }
   
-  .church-gallery {
+  /* =======================
+   Church Gallery Section
+======================= */
+.church-gallery {
   padding: 50px 20px;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: #f9f9f9;
 }
 
 .church-gallery h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: white;
+  color: #003366;
 }
 
+/* Gallery Grid Layout */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #0055aa;
 }
 
+/* Gallery Thumbnail Images */
 .gallery-grid img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
+
+/* =======================
+   Lightbox Overlay
+======================= */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Show lightbox when link is targeted */
+.lightbox:target {
+  display: flex;
+}
+
+/* Lightbox Image Styling */
+.lightbox img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Lightbox Close Button */
+.lightbox a {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+
 
 .contact-section {
   padding: 30px 20px;
-  background-color: black;
+  background-color: white;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .contact-section h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: white;
+  color: black;
 }
 
 .contact-details {
@@ -379,14 +427,14 @@
 }
 
 .contact-info h3, .contact-form h3 {
-  color: white;
+  color: black;
   margin-bottom: 15px;
   font-size: 1.3rem;
 }
 
 .contact-info p {
   margin: 5px 0;
-  color: white;
+  color: black;
 }
 
 .contact-form form {
@@ -397,13 +445,13 @@
 .contact-form input, .contact-form textarea {
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #fc0627;
   border-radius: 5px;
 }
 
 .contact-form button {
   background-color: orangered;
-  color: white;
+  color: black;
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -459,4 +507,175 @@
       display: block;
     }
   }
-  
+  /* ================================
+  RESPONSIVE STYLES: Below 992px
+=================================*/
+@media (max-width: 992px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo-img {
+    width: 70px;
+    height: 70px;
+    margin-left: -20px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .preacher-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .sermon-list {
+    gap: 40px;
+  }
+
+  .sermon {
+    width: 90%;
+  }
+
+  .sermon-thumbnail {
+    height: 140px;
+  }
+
+  .ministry-card {
+    width: 90%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* ================================
+  RESPONSIVE STYLES: Below 768px
+=================================*/
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: row;
+  }
+
+  nav ul {
+    right: 0;
+    top: 70px;
+    width: 160px;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-info h2 {
+    font-size: 28px;
+  }
+
+  .left-info h3 {
+    font-size: 20px;
+  }
+
+  .left-info p, .right-info p {
+    font-size: 18px;
+  }
+
+  .preacher-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .contact-form {
+    min-width: 90%;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+  }
+
+  .sermon-list {
+    gap: 20px;
+  }
+
+  .sermon-thumbnail {
+    height: 120px;
+  }
+
+  .ministry-card {
+    width: 95%;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================================
+  RESPONSIVE STYLES: Below 480px
+=================================*/
+@media (max-width: 480px) {
+  .logo-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .preacher-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sermon {
+    width: 95%;
+  }
+
+  .sermon-thumbnail {
+    height: 100px;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .ministry-card {
+    width: 95%;
+  }
+
+  .contact-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+}

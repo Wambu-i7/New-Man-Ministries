@@ -14,8 +14,11 @@
         <img src="images/logo.jpg" alt="Newman Ministries Logo" class="logo-img" />
         <span class="logo-text">Newman Ministries International</span>
         </a>
+
+        <!-- Nav toggle button for mobile -->
+        <button class="nav-toggle" id="navToggle">&#9776;</button>
       <nav>
-        <ul class="nav-links">
+        <ul  id="navMenu" class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#sermons">Sermons</a></li>
           <li><a href="#about">About Us</a></li>
@@ -23,9 +26,7 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        ☰
-      </button>
+      
     </div>
   </header>
 
@@ -65,44 +66,31 @@
       <div class="sermon-list">
 
         <article class="sermon">
-          <img src="images/sermon1.jpg" alt="Sermon 1 Thumbnail" class="sermon-thumbnail" />
-          <h3>RUNNING THE RACE OF FAITH WITH ENDURANCE</h3>
-          <p>Apostle Dennis Mbugua | 11th May 2025</p>
-          <a href="https://www.youtube.com/embed/samplevideo1" target="_blank" class="btn-secondary">Watch</a>
+          <iframe width="100%" height="200"
+            src="https://www.youtube.com/embed/t-Oxz63FbIQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <h3>RENEWING THE MIND, TRANSFORMATION OF LIFE</h3>
+          <p>Apostle Dennis Mbugua | 15th June 2025</p>
         </article>
 
+
         <article class="sermon">
-          <img src="images/sermon2.jpg" alt="Sermon 2 Thumbnail" class="sermon-thumbnail"/>
-          <h3>THE IDENTITY AND DEITY OF JESUS CHRIST</h3>
-          <p>Apostle Dennis Mbugua | 19th May 2025</p>
-          <a href="https://www.youtube.com/embed/samplevideo2" target="_blank" class="btn-secondary">Watch</a>
+          <img src="images/sermon0.jpeg" alt="Sermon 2 Thumbnail" class="sermon-thumbnail"/>
+          <h3>THE PRECISION OF PROPHECY</h3>
+          <p>Apostle Dennis Mbugua | 22nd June 2025</p>
+          <a href="" target="_blank" class="btn-secondary">Watch</a>
         </article>
 
         <article class="sermon">
           <img src="images/preacher.jpg" alt="Sermon 3 Thumbnail" class="sermon-thumbnail"/>
-          <h3>THE LORDSHIP OF CHRIST</h3>
-          <p>Apostle Dennis Mbugua | 25th May 2025</p>
+          <h3>MINISTRY OF THE HOLY SPIRIT</h3>
+          <p>Apostle Dennis Mbugua | 29th June 2025</p>
           <a href="https://www.youtube.com/embed/samplevideo1" target="_blank" class="btn-secondary">Watch</a>
         </article>
-        <article class="sermon">
-          <img src="images/sermon4.jpg" alt="Sermon 1 Thumbnail" class="sermon-thumbnail" />
-          <h3>THE SUFFERING AND COMPASSION OF JESUS</h3>
-          <p>Teacher Joseph Kamau | 27th April 2025</p>
-          <a href="https://www.youtube.com/embed/samplevideo1" target="_blank" class="btn-secondary">Watch</a>
-        </article>
-        <article class="sermon">
-          <img src="images/sermon5.jpg" alt="Sermon 1 Thumbnail" class="sermon-thumbnail" />
-          <h3>WALKING WORTHY OF THE ONE WHO LAID DOWN HIS LIFE FOR ME</h3>
-          <p>Mom Beatrice Njau | 20th April 2025</p>
-          <a href="https://www.youtube.com/embed/samplevideo1" target="_blank" class="btn-secondary">Watch</a>
-        </article>
-        <article class="sermon">
-          <img src="images/sermon6.jpg" alt="Sermon 1 Thumbnail" class="sermon-thumbnail" />
-          <h3>THE UNSHAKABLE KINGDOM</h3>
-          <p>Apostle Dennis Mbugua | 13th April 2025</p>
-          <a href="https://www.youtube.com/embed/samplevideo1" target="_blank" class="btn-secondary">Watch</a>
-        </article>
-        <!-- Add more sermon entries here -->
 
       </div>
     </div>
@@ -136,7 +124,7 @@
         </div>
 
         <div class="ministry-card">
-          <img src="images/youth.jpg" alt="Youth Ministry" class="ministry-img">
+          <img src="images/gallery3.jpg" alt="Youth Ministry" class="ministry-img">
           <h3>Youth Ministry</h3>
           <p>Ministering to the youth with love, hope, and the message of salvation.</p>
         </div>
@@ -145,18 +133,93 @@
   </section>
 
   <section id="gallery" class="church-gallery">
-    <h2>Church Gallery</h2>
-    <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="Crusade Event">
-      <img src="images/gallery2.jpg" alt="Worship Service">
-      <img src="images/gallery3.jpg" alt="Youth Ministry">
-      <img src="images/gallery4.jpg" alt="Prison Ministry">
-      <img src="images/gallery5.jpg" alt="Men Fellowship">
-      <img src="images/gallery6.jpg" alt="Children Ministry">
-      <img src="images/gallery7.jpg" alt="Family sundays">
-      <img src="images/gallery8.jpg" alt="Women Fellowship">
-    </div>
-  </section>
+  <h2>Church Gallery</h2>
+
+  <div class="gallery-grid">
+    <!-- Gallery Item 1 -->
+    <a href="#img1" class="gallery-item">
+      <img src="images/gallery1.jpg" alt="Event 1">
+    </a>
+
+    <!-- Gallery Item 2 -->
+    <a href="#img2" class="gallery-item">
+      <img src="images/prison.jpg" alt="Event 2">
+    </a>
+
+    <!-- Gallery Item 3 -->
+    <a href="#img3" class="gallery-item">
+      <img src="images/gallery3.jpg" alt="Event 3">
+    </a>
+
+    <!-- Gallery Item 4 -->
+    <a href="#img4" class="gallery-item">
+      <img src="images/gallery4.jpg" alt="Event 4">
+    </a>
+
+    <!-- Gallery Item 5 -->
+    <a href="#img5" class="gallery-item">
+      <img src="images/gallery5.jpg" alt="Event 5">
+    </a>
+
+    <!-- Gallery Item 6 -->
+    <a href="#img6" class="gallery-item">
+      <img src="images/gallery6.jpg" alt="Event 6">
+    </a>
+
+    <!-- Gallery Item 7 -->
+    <a href="#img7" class="gallery-item">
+      <img src="images/gallery7.jpg" alt="Event 7">
+    </a>
+
+    <!-- Gallery Item 8 -->
+    <a href="#img8" class="gallery-item">
+      <img src="images/gallery8.jpg" alt="Event 8">
+    </a>
+  </div>
+
+  <!-- Lightbox Overlays -->
+  <div id="img1" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/gallery1.jpg" alt="Event 1">
+  </div>
+
+  <div id="img2" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/prison.jpg" alt="Event 2">
+  </div>
+
+  <div id="img3" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/gallery3.jpg" alt="Event 3">
+  </div>
+
+  <div id="img4" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/gallery4.jpg" alt="Event 4">
+  </div>
+
+  <div id="img5" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/gallery5.jpg" alt="Event 5">
+  </div>
+
+  <div id="img6" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/gallery6.jpg" alt="Event 6">
+  </div>
+
+  <div id="img7" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/gallery7.jpg" alt="Event 7">
+  </div>
+
+  <div id="img8" class="lightbox">
+    <a href="#gallery">×</a>
+    <img src="images/gallery8.jpg" alt="Event 8">
+  </div>
+
+</section>
+
 
   <section id="contact" class="contact-section">
   <h2>Contact Us</h2>
@@ -167,7 +230,7 @@
       <p>Newman Ministries Grounds</p>
       <p>Off Gikambura Road, Opposite Shell Petro Station, Nairobi, Kenya</p>
       <p>Phone: +254 712 345 678</p>
-      <p>Email: info@newmanministries.org</p>
+      <p>Email: newmanministriesintl@gmail.com</p>
     </div>
 
     <div class="contact-form">
