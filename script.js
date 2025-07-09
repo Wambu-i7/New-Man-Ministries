@@ -1,36 +1,29 @@
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
-// Toggle the nav menu when hamburger is clicked
-navToggle.addEventListener('click', (e) => {
-  e.stopPropagation(); // Prevent this click from bubbling up to the document listener
+// Function to toggle menu
+navToggle.addEventListener('click', () => {
   navMenu.classList.toggle('show');
 });
 
-// Function to close the nav menu
+// Function to close menu
 function closeMenu() {
   navMenu.classList.remove('show');
 }
 
-// Close nav when clicking outside
-document.addEventListener('click', (event) => {
-  const isClickInsideNav = navMenu.contains(event.target);
-  const isClickOnToggle = navToggle.contains(event.target);
+// Function to handle both clicks and touches outside the nav
+function handleOutsideInteraction(event) {
+  const isInsideNav = navMenu.contains(event.target);
+  const isOnToggle = navToggle.contains(event.target);
 
-  if (!isClickInsideNav && !isClickOnToggle) {
+  if (!isInsideNav && !isOnToggle) {
     closeMenu();
   }
-});
+}
 
-// Also close menu on touch anywhere outside
-document.addEventListener('touchstart', (event) => {
-  const isTouchInsideNav = navMenu.contains(event.target);
-  const isTouchOnToggle = navToggle.contains(event.target);
+// Attach both click and touchstart listeners in one go
+['click', 'touchstart'].forEach(evt =>
+  document.addEventListener(evt, handleOutsideInteraction)
+);
 
-  if (!isTouchInsideNav && !isTouchOnToggle) {
-    closeMenu();
-  }
-});
-
-// Also close menu on scroll
 document.addEventListener('scroll', closeMenu, { passive: true });

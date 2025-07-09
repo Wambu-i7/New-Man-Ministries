@@ -222,16 +222,27 @@
       <h3>Our Location</h3>
       <p>Newman Ministries Grounds</p>
       <p>Off Gikambura Road, Opposite Shell Petro Station, Nairobi, Kenya</p>
-      <p>Phone: +254 712 345 678</p>
+      <p>Phone: +254 799841105</p>
       <p>Email: newmanministriesintl@gmail.com</p>
     </div>
 
     <div class="contact-form">
       <h3>Send Us a Message</h3>
-      <form action="#" method="POST">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+      <form action="https://formsubmit.co/newmanministriesintl@gmail.com" method="POST">
+
+        <!--Form fields-->
+        <input type="text" name="Name"  placeholder="Your Name" required>
+        <input type="Email" name="email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
+
+         <!--Disable captcha-->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!--Redirect after successful submission-->
+        <input type="hidden" name="_next" value="https://Wambu-i7.github.io/New-Man-Ministries/">
+
+
+        <!--Submit button-->
         <button type="submit">Send Message</button>
       </form>
     </div>
