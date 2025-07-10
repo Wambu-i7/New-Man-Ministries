@@ -33,8 +33,17 @@ const viewMoreBtn = document.querySelector('.view-more-btn');
 const hiddenItems = document.querySelectorAll('.gallery-item.hidden');
 
 viewMoreBtn.addEventListener('click', () => {
-  hiddenItems.forEach(item => item.classList.remove('hidden'));
-  viewMoreBtn.style.display = 'none'; // Hide button after expanding
+  const isShowing = viewMoreBtn.textContent === 'View Less';
+
+  hiddenItems.forEach(item => {
+    item.style.display = isShowing ? 'none' : 'block';
+  });
+
+  viewMoreBtn.textContent = isShowing ? 'View More' : 'View Less';
+
+ if (isShowing) {
+    document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+  }
 });
 
 // Lightbox functionality
