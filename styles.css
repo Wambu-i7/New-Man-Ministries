@@ -373,12 +373,6 @@
   z-index: 9999;
 }
 
-/* Show lightbox when link is targeted */
-.lightbox:target {
-  display: flex;
-}
-
-/* Lightbox Image Styling */
 .lightbox img {
   max-width: 800px;
   width: 100%;
@@ -387,16 +381,72 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Lightbox Close Button */
-.lightbox a {
+.close-btn {
   position: absolute;
   top: 20px;
   right: 30px;
   color: white;
   font-size: 2rem;
-  text-decoration: none;
+  cursor: pointer;
+  z-index: 10000;
 }
 
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 20px;
+  transform: translateY(-50%);
+  z-index: 10000;
+}
+
+.nav-btn.prev {
+  left: 0;
+}
+
+.nav-btn.next {
+  right: 0;
+}
+
+/* ================================
+  Lightbox Responsive Adjustments
+================================= */
+@media (max-width: 768px) {
+  .lightbox img {
+    max-width: 90%;
+  }
+
+  .close-btn {
+    font-size: 1.8rem;
+    top: 15px;
+    right: 20px;
+  }
+
+  .nav-btn {
+    font-size: 2.5rem;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox img {
+    max-width: 95%;
+  }
+
+  .close-btn {
+    font-size: 1.5rem;
+    top: 10px;
+    right: 15px;
+  }
+
+  .nav-btn {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+}
 
 
 .contact-section {
@@ -680,4 +730,24 @@
     height: auto;
     padding: 40px 20px;
   }
+}
+.hidden {
+  display: none;
+}
+
+.view-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ffcc00;
+  color: #003366;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #e6b800;
 }
