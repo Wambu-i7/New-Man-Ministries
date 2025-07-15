@@ -230,7 +230,7 @@
     width: 400px;
     height: 180px;
     object-fit: cover;
-    object-position: top;
+     object-position: top;
     border-radius: 5px;
   }
   
