@@ -210,12 +210,6 @@
     text-align: center;
   }
   
-  .sermon img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 5px;
-  }
-  
   .sermon h3 {
     margin-bottom: 8px;
     color: black;
@@ -227,12 +221,13 @@
     margin-bottom: 12px;
   }
   .sermon-thumbnail {
-    width: 400px;
-    height: 180px;
-    object-fit: cover;
-     object-position: top;
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
     border-radius: 5px;
-  }
+}
+
   
   
   .btn-secondary {
@@ -602,7 +597,7 @@
   }
 
   .sermon-thumbnail {
-    height: 140px;
+    max-height: 140px;
   }
 
   .ministry-card {
