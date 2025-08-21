@@ -1,7 +1,6 @@
 /* Reset & base */
   html {
     scroll-behavior: smooth;
-    background-color: white;
   }
 
 
@@ -15,7 +14,7 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #a3a2a2;
-    background-color: white;
+
   }
 
   section {
@@ -95,30 +94,63 @@
   
   
   .hero {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    text-align: center;
- 
-  }
-  
-  .hero-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    color: #574605;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  min-height: 100vh; /* full screen */
+  overflow: hidden;
+
+  /* background image */
+  background: url('/images/gallery3.jpg') no-repeat center center/cover;
+}
+
+/* blur layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: inherit;
+  filter: blur(3px);   /* adjust blur */
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* optional dark overlay for readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); /* dark tint */
+  z-index: 0;
+}
+
+/* ensure text/content is above the blur */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* keep your original styles */
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #fff; /* change to white for readability */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #eee; /* softer white instead of black */
+}
+
   .image-row {
     display: flex;
     justify-content: center;
@@ -137,11 +169,11 @@
   .left-info p {
     margin: 8px 0;
     text-align: center;
-    color: black;
+    color: #eee;
     font-size:x-large;
   }
   .left-info h3 {
-    color: black;
+    color: #e6b800;
     font-size: 25px;
   }
   .left-info h2 {
@@ -149,7 +181,7 @@
     font-size: 35px;
   }
   .right-info p {
-    color: black;
+    color: #eee;
     font-size: 30px;
   }
   
@@ -183,8 +215,6 @@
   
   /* Sermons */
   
-  
-  
   .sermons h2 {
     font-size: 2.8rem;
     margin-bottom: 40px;
@@ -202,7 +232,7 @@
   }
   
   .sermon {
-    background-color: #f0f4ff;
+    background-color: wheat;
     border-radius: 8px;
     width: 280px;
     padding: 15px;
