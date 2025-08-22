@@ -104,7 +104,7 @@
   overflow: hidden;
 
   /* background image */
-  background: url('/images/gallery3.jpg') no-repeat center center/cover;
+  background: url('images/gallery3.jpg') no-repeat center center/cover;
 }
 
 /* blur layer */
