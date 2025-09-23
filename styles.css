@@ -457,6 +457,69 @@
   font-size: 1rem;
 }
 
+/* ================================
+   Responsive for About Page
+=================================*/
+
+/* Tablets */
+@media (max-width: 768px) {
+  .page-hero.about-hero {
+    padding: 100px 15px;
+  }
+
+  .page-hero.about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero.about-hero p {
+    font-size: 1.1rem;
+  }
+
+  .about-section {
+    margin: 40px auto;
+    padding: 15px;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .page-hero.about-hero {
+    padding: 80px 10px;
+  }
+
+  .page-hero.about-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .page-hero.about-hero p {
+    font-size: 0.95rem;
+  }
+
+  .about-section {
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  .about-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 0.9rem;
+  }
+}
+
+
   /* =======================
    Church Gallery Section
 ======================= */
