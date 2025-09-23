@@ -379,45 +379,84 @@
     background-color: #e6b800;
   }
   
-  /* About & Contact */
-  
-  .about, .contact {
-    text-align: center;
-    
-  }
-  
-  
-.about {
-  padding: 10px 20px;
-  color: black;
+  /* --- About Us Page Styles --- */
+
+/* Hero section */
+.page-hero.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("images/about.jpg") center/cover no-repeat;
+  color: white;
   text-align: center;
-  background-color: white;
+  padding: 150px 20px;
 }
 
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: black;
+.page-hero.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
-  .about h2, .contact h2 {
-    color: black;
-    margin-bottom: 15px;
-    font-size: 2.5rem;
-    
-  }
-  .about h3 {
-    font-size: 1.5rem;
-    color: black;
-  }
-  
-  .about p, .contact p {
-    max-width: 700px;
-    margin: 0 auto;
-    color: black;
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  
+
+.page-hero.about-hero p {
+  font-size: 1.7rem;
+  max-width: 700px;
+  color: yellow;
+  margin: 0 auto;
+}
+
+/* About Sections */
+.about-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0066cc; /* highlight color */
+  margin: 10px auto 0;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Lists */
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.about-section ul li {
+  font-size: 1.05rem;
+  padding: 8px 0;
+  color: #444;
+  position: relative;
+  padding-left: 25px;
+}
+
+.about-section ul li::before {
+  content: "✔";
+  color: #0066cc;
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
   /* =======================
    Church Gallery Section
 ======================= */

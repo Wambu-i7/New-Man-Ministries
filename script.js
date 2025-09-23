@@ -32,19 +32,21 @@ document.addEventListener('scroll', closeMenu, { passive: true });
 const viewMoreBtn = document.querySelector('.view-more-btn');
 const hiddenItems = document.querySelectorAll('.gallery-item.hidden');
 
-viewMoreBtn.addEventListener('click', () => {
-  const isShowing = viewMoreBtn.textContent === 'View Less';
+if (viewMoreBtn) {
+  viewMoreBtn.addEventListener('click', () => {
+    const isShowing = viewMoreBtn.textContent === 'View Less';
 
-  hiddenItems.forEach(item => {
-    item.style.display = isShowing ? 'none' : 'block';
+    hiddenItems.forEach(item => {
+      item.style.display = isShowing ? 'none' : 'block';
+    });
+
+    viewMoreBtn.textContent = isShowing ? 'View More' : 'View Less';
+
+  if (isShowing) {
+      document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+    }
   });
-
-  viewMoreBtn.textContent = isShowing ? 'View More' : 'View Less';
-
- if (isShowing) {
-    document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
-  }
-});
+}
 
 // Lightbox functionality
 const galleryImages = document.querySelectorAll('.gallery-item img');
@@ -66,29 +68,36 @@ galleryImages.forEach((image, index) => {
   });
 });
 
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
     lightbox.style.display = 'none';
-  }
-});
+  });
+}
 
+if (lightbox) {
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+}
 // Show previous image
-prevBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-  showImage();
-});
+if (prevBtn) {
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage();
+  });
+}
 
 // Show next image
-nextBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  currentIndex = (currentIndex + 1) % galleryImages.length;
-  showImage();
-});
+if (nextBtn) {
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage();
+  });
+}
 
 // Function to display current image
 function showImage() {
