@@ -380,14 +380,14 @@
   }
   
   /* --- About Us Page Styles --- */
-
-/* Hero section */
+  /* Hero Section */
 .page-hero.about-hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url("images/about.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 150px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .page-hero.about-hero h1 {
@@ -398,58 +398,71 @@
 .page-hero.about-hero p {
   font-size: 1.7rem;
   max-width: 700px;
-  color: yellow;
   margin: 0 auto;
+  color: yellow;
+  line-height: 1.6;
 }
 
 /* About Sections */
 .about-section {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 60px auto;
   padding: 20px;
-  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.about-section h2 {
+/* Flex container for text + image */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-content .text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-content .text h2 {
   font-size: 2rem;
-  color: #333;
+  color: #0066cc;
   margin-bottom: 20px;
   position: relative;
 }
 
-.about-section h2::after {
+.about-content .text h2::after {
   content: '';
   display: block;
   width: 60px;
   height: 3px;
-  background: #0066cc; /* highlight color */
-  margin: 10px auto 0;
+  background: #0066cc;
+  margin-top: 10px;
 }
 
-.about-section p {
+.about-content .text p,
+.about-content .text ul {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #555;
 }
 
-/* Lists */
-.about-section ul {
+.about-content .text ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left;
-  display: inline-block;
 }
 
-.about-section ul li {
-  font-size: 1.05rem;
-  padding: 8px 0;
-  color: #444;
-  position: relative;
+.about-content .text ul li {
   padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
-.about-section ul li::before {
+.about-content .text ul li::before {
   content: "✔";
   color: #0066cc;
   position: absolute;
@@ -457,67 +470,42 @@
   font-size: 1rem;
 }
 
-/* ================================
-   Responsive for About Page
-=================================*/
+/* Image side */
+.about-image {
+  flex: 1;
+  min-width: 280px;
+}
 
-/* Tablets */
-@media (max-width: 768px) {
-  .page-hero.about-hero {
-    padding: 100px 15px;
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
   }
 
+  .about-image {
+    order: -1; /* Image first on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
   .page-hero.about-hero h1 {
     font-size: 2rem;
   }
 
   .page-hero.about-hero p {
-    font-size: 1.1rem;
-  }
-
-  .about-section {
-    margin: 40px auto;
-    padding: 15px;
-  }
-
-  .about-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
-/* Phones */
-@media (max-width: 480px) {
-  .page-hero.about-hero {
-    padding: 80px 10px;
-  }
-
-  .page-hero.about-hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .page-hero.about-hero p {
-    font-size: 0.95rem;
-  }
-
-  .about-section {
-    margin: 30px auto;
-    padding: 10px;
-  }
-
-  .about-section h2 {
-    font-size: 1.3rem;
-  }
-
-  .about-section p,
-  .about-section ul li {
-    font-size: 0.9rem;
-  }
-}
 
 
   /* =======================
