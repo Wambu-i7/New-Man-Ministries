@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Gallery - Newman Ministries International</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Navigation -->
+  <header>
+    <div class=" container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Church Logo" class="logo-img">
+      <span class="logo-text">Our Gallery</span>
+    </a>
+
+    <!-- Hamburger Button -->
+    <button id="navToggle" class="nav-toggle">&#9776;</button>
+
+    <nav>
+      <ul id="navMenu" class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <!-- Dropdown starts here -->
+          <li class="dropdown">
+            <a href="ministries.html">Ministries ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="ministries.html#youth-ministry">Youth Ministry</a></li>
+              <li><a href="ministries.html#children-ministry">Children’s Ministry</a></li>
+              <li><a href="ministries.html#womens-ministry">Women’s Ministry</a></li>
+              <li><a href="ministries.html#mens-ministry">Men’s Ministry</a></li>
+              <li><a href="ministries.html#music-ministry">Music Ministry</a></li>
+              <li><a href="ministries.html#outreach-ministry">Outreach Ministry</a></li>
+            </ul>
+          </li>
+        <li class="dropdown">
+          <a href="about.html" class="dropbtn">About Us ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="about.html#vision">Our Vision</a></li>
+            <li><a href="about.html#mission">Our Mission</a></li>
+            <li><a href="about.html#values">Core Values</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+<section class="hero" style="background: url('images/ministries.jpg') center/cover no-repeat; padding: 150px 20px; text-align: center; color: white;">
+  <div class="container hero-content" style="background: rgba(0,0,0,0.5); padding: 40px; border-radius: 10px;">
+    <h1>Our Photos and Videos</h1>
+    <p style="font-size: 28px; font-weight: 500; color: yellow;">
+      Moments of worship, fellowship, and outreach captured in love.
+    </p>
+  </div>
+</section>
+    <!-- Gallery Section -->
+  <section id="gallery" class="church-gallery">
+  <h2>Photos</h2>
+  <div class="gallery-grid">
+    <!-- Gallery Item 1 -->
+    <div class="gallery-item">
+      <img src="images/gallery1.jpg" alt="Event 1" data-index="0">
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery2.jpg" alt="Event 2" data-index="1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery3.jpg" alt="Event 3" data-index="2">
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery4.jpg" alt="Event 4" data-index="3">
+    </div>
+
+    <div class="gallery-item">
+      <video src="videos/sermon1.mp4" muted controls></video>
+    </div>
+    <div class="gallery-item">
+      <video src="videos/sermon2.mp4" muted controls></video>
+    </div>
+
+    <div class="gallery-item hidden">
+      <img src="images/gallery5.jpg" alt="Event 5" data-index="4">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery6.jpg" alt="Event 6" data-index="5">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery7.jpg" alt="Event 7" data-index="6">
+    </div>
+    <div class="gallery-item hidden">
+      <video src="videos/sermon1.mp4" muted controls></video>
+    </div>
+    <div class="gallery-item hidden">
+      <video src="videos/sermon2.mp4" muted controls></video>
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery8.jpg" alt="Event 8" data-index="7">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery9.jpg" alt="Event 9" data-index="8">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery10.jpg" alt="Event 10" data-index="9">
+    </div>
+    <div class="gallery-item hidden">
+      <video src="videos/sermon1.mp4" muted controls></video>
+    </div>
+    <div class="gallery-item hidden">
+      <video src="videos/sermon2.mp4" muted controls></video>
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery11.jpg" alt="Event 11" data-index="10">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery12.jpg" alt="Event 12" data-index="11">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery13.jpg" alt="Event 13" data-index="12">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery14.jpg" alt="Event 14" data-index="13">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery15.jpg" alt="Event 15" data-index="14">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/women.jpg" alt="Event 15" data-index="14">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/children.jpg" alt="Event 15" data-index="14">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery16.jpg" alt="Event 16" data-index="15">
+    </div>
+    <div class="gallery-item hidden">
+      <img src="images/gallery17.jpg" alt="Event 17" data-index="16">
+    </div>
+  </div>
+  <button class="view-more-btn">View More</button>
+</section>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <div class="nav-btn prev">&#10094;</div>
+  <div class="nav-btn next">&#10095;</div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Newman Ministry International. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
