@@ -248,6 +248,67 @@
     background-color: #002244;
    
   }
+
+  .image-block {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  margin: 30px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.image-block .overlay {
+  background: rgba(0, 0, 0, 0.55); /* Dark overlay for readability */
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  max-width: 700px;
+  border-radius: 8px;
+}
+
+.image-block h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.image-block p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.learn-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.learn-more:hover {
+  background: #004999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-block {
+    height: 250px;
+  }
+  .image-block h2 {
+    font-size: 1.5rem;
+  }
+  .image-block p {
+    font-size: 1rem;
+  }
+}
+
   
   /* Sermons */
   
