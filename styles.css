@@ -485,7 +485,7 @@
 .ministry-text h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: var(--primary-color, #003366);
+  color: #003366;
 }
 .ministry-text h3 {
   color: black;
