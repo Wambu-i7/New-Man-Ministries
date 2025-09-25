@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sermons  | Newman Ministry International</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  
+  <header>
+    <div class=" container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Church Logo" class="logo-img">
+      <span class="logo-text">Newman Ministries Sermons</span>
+    </a>
+    <button id="navToggle" class="nav-toggle">☰</button>
+    <nav>
+    <ul id="navMenu" class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#sermons">Sermons</a></li>
+        <!-- Dropdown starts here -->
+          <li class="dropdown">
+            <a href="ministries.html">Ministries ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="ministries.html#youth-ministry">Youth Ministry</a></li>
+              <li><a href="ministries.html#children-ministry">Children’s Ministry</a></li>
+              <li><a href="ministries.html#womens-ministry">Women’s Ministry</a></li>
+              <li><a href="ministries.html#mens-ministry">Men’s Ministry</a></li>
+              <li><a href="ministries.html#music-ministry">Music Ministry</a></li>
+              <li><a href="ministries.html#outreach-ministry">Outreach Ministry</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">About Us ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="about.html#vision">Our Vision</a></li>
+            <li><a href="about.html#mission">Our Mission</a></li>
+            <li><a href="about.html#values">Core Values</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Hero section-->
+  <!-- Sermons Hero Section -->
+<section class="page-hero sermons-hero">
+  <div class="hero-overlay">
+    <h1>Listen & Be Uplifted</h1>
+    <p>Explore powerful sermons, rooted in God’s Word, bringing light and transformation to your life.</p>
+    <a href="#latest-sermons" class="hero-btn">Watch Now</a>
+  </div>
+</section>
+
+<!-- Sermons Section -->
+  <section id="latest-sermons" class="sermons-section">
+    <h2>Latest Sermons</h2>
+    <div class="sermons-grid">
+      
+      <!-- Sermon 1 -->
+      <div class="sermon-card">
+        <img src="images/sermon1.jpg" alt="Sermon 1">
+        <h3>RENEWING THE MIND</h3>
+        <p>Apostle Dennis Mbugua | NewMan Ministries</p>
+        <a href="https://youtu.be/t-Oxz63FbIQ?si=zGt5GbB_qNKxdiUa" target="_blank" class="sermon-btn">Watch Now</a>
+      </div>
+
+      <!-- Sermon 2 -->
+      <div class="sermon-card">
+        <img src="images/sermon2.jpg" alt="Sermon 2">
+        <h3>PRECISION OF PROPHECY</h3>
+        <p>Apostle Dennis Mbugua | NewMan Ministries</p>
+        <a href="https://youtube.com/watch?v=KfBgcUj8cnY&feature=shared" target="_blank" class="sermon-btn">watch Now</a>
+      </div>
+
+      <!-- Sermon 3 -->
+      <div class="sermon-card">
+        <img src="images/sermon3.jpg" alt="Sermon 3">
+        <h3>THE WORD IS NEAR YOU</h3>
+        <p>Apostle Dennis Mbugua | NewMan Ministries</p>
+        <a href="https://youtu.be/i77haUZhNNw" target="_blank" class="sermon-btn">Watch Now</a>
+      </div>
+
+      <!-- Sermon 4 -->
+      <div class="sermon-card">
+        <img src="images/sermon4.jpg" alt="Sermon 3">
+        <h3>TO US THERE IS BUT ONE GOD.</h3>
+        <p>Apostle Dennis Mbugua | NewMan Ministries</p>
+        <a href="https://youtu.be/Z5x1QcesaaU?si=vHm9VTE_9-UaVPaA" target="_blank" class="sermon-btn">Watch Now</a>
+      </div>
+
+      <!-- Sermon 5 -->
+      <div class="sermon-card">
+        <img src="images/sermon6.jpg" alt="Sermon 3">
+        <h3>THE SPIRIT OF WISDOM AND REVELATION</h3>
+        <p>Apostle Dennis Mbugua | NewMan Ministries</p>
+        <a href="https://youtu.be/VUNqHX_1cUE?si=uTyFHEWB-qB5JCQg" target="_blank" class="sermon-btn">Watch Now</a>
+      </div>
+
+      <!-- Sermon 6 -->
+      <div class="sermon-card">
+        <img src="images/preacher.jpg" alt="Sermon 3">
+        <h3>DIVINITY OF CHRIST</h3>
+        <p>Apostle Dennis Mbugua | NewMan Ministries</p>
+        <a href="https://youtu.be/Tm4lJr_OAis?si=jg5WD3y1wPFrFvYp" target="_blank" class="sermon-btn">Watch Now</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Newman Ministry International. All rights reserved.</p>
+  </footer>
+
+  <!-- Nav Toggle Script (same as other pages) -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    }
+  </script>
+</body>
+</html>
+
