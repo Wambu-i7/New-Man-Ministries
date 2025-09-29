@@ -1026,6 +1026,9 @@
   .left-info p, .right-info p {
     font-size: 18px;
   }
+  .right-info p {
+    color: white;
+  }
 
   .preacher-image img {
     width: 250px;
