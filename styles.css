@@ -18,7 +18,7 @@
   }
 
   section {
-    scroll-margin-top: 110px; /* Adjust to your header height */
+    scroll-margin-top: 110px;
   }
   #home {
    padding-top: -25px;
@@ -126,8 +126,6 @@
   
   /* Hero section */
   
-  
-  
   .hero {
   position: relative;
   display: flex;
@@ -135,7 +133,7 @@
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  min-height: 100vh; /* full screen */
+  min-height: 100vh; 
   overflow: hidden;
 
   /* background image */
@@ -150,32 +148,22 @@
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: inherit;
-  filter: blur(3px);   /* adjust blur */
+  filter: blur(2px);   
   transform: scale(1.1);
   z-index: 0;
 }
 
-/* optional dark overlay for readability */
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.3); /* dark tint */
-  z-index: 0;
-}
-
-/* ensure text/content is above the blur */
+/* ensures content is above the blur */
 .hero-content {
   position: relative;
   z-index: 1;
 }
 
-/* keep your original styles */
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #fff; /* change to white for readability */
+  color: #e6b800; 
+  font-weight: 700;
 }
 
 .hero-content p {
@@ -184,23 +172,22 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  color: #eee; /* softer white instead of black */
+  color: #eee;
 }
 
-  .image-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin: 30px 0;
-    flex-wrap: wrap; /* for responsiveness */
-  }
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
   
-  .left-info, .right-info {
-    flex: 1;
-    min-width: 200px;
-    
-  }
+.left-info, .right-info {
+  flex: 1;
+  min-width: 200px;  
+}
   
   .left-info p {
     margin: 8px 0;
@@ -222,7 +209,6 @@
   }
   
   .preacher-image {
-    text-align: center;
     padding: 30px 0;
   }
   
@@ -234,20 +220,6 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   }
   
-  .btn-primary {
-    background-color: #003366;
-    color: #ffcc00;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
-    margin: 55px 0;
-  }
-  
-  .btn-primary:hover {
-    background-color: #002244;
-   
-  }
 
   .image-block {
   position: relative;
@@ -260,7 +232,11 @@
   justify-content: center;
   border-radius: 15px;
   overflow: hidden;
+  transition: transform 0.5s ease; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.image-block:hover {
+  transform: translateY(-8px);
 }
 
 .image-block .overlay {
@@ -295,22 +271,8 @@
 .learn-more:hover {
   background: #004999;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .image-block {
-    height: 250px;
-  }
-  .image-block h2 {
-    font-size: 1.5rem;
-  }
-  .image-block p {
-    font-size: 1rem;
-  }
-}
-
   
-  /* Sermons */
+/* Sermons styles */
   
 .sermons-hero {
   background: url("images/values.jpg") center/cover no-repeat;
@@ -425,29 +387,41 @@
   background: #c89a06;
 }
 
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .sermons-hero h1 {
-    font-size: 2rem;
-  }
-  .sermons-hero p {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .sermons-hero {
-    height: 60vh;
-  }
-  .sermons-hero h1 {
-    font-size: 1.6rem;
-  }
-  .sermons-hero p {
-    font-size: 0.9rem;
-  }
-}
-
 /* Ministries sections */
+.ministry-hero {
+  background: url("images/ministry.jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.ministry-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.ministry-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.ministry-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
 .ministry-section {
   padding: 50px 20px;
   background-color: #f9f9f9;
@@ -516,45 +490,44 @@
 .ministry-text .btn-primary:hover {
   background-color: #002244;
 }
-
-  
-  .btn-secondary {
-    background-color: #ffcc00;
-    color: #003366;
-    padding: 8px 20px;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
-    display: inline-block;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #e6b800;
-  }
   
   /* --- About Us Page Styles --- */
   /* Hero Section */
-.page-hero.about-hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url("images/about.jpg") center/cover no-repeat;
-  color: white;
+.about-hero {
+  background: url("images/aboutus.jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   text-align: center;
-  padding: 150px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 
-.page-hero.about-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
 }
 
-.page-hero.about-hero p {
-  font-size: 1.7rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: yellow;
-  line-height: 1.6;
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
 }
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
 
 /* About Sections */
 .about-section {
@@ -636,31 +609,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   object-fit: cover;
 }
-
-/* Responsive layout */
-@media (max-width: 992px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image {
-    order: -1; /* Image first on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .page-hero.about-hero h1 {
-    font-size: 2rem;
-  }
-
-  .page-hero.about-hero p {
-    font-size: 1.2rem;
-  }
-}
-
-
-
   /* =======================
    Church Gallery Section
 ======================= */
@@ -1196,4 +1144,61 @@
 
 .view-more-btn:hover {
   background-color: #e6b800;
+}
+
+/*Media Queries for responsiveness*/
+/* image blocks in index.html */
+@media (max-width: 768px) {
+  .image-block {
+    height: 250px;
+  }
+  .image-block h2 {
+    font-size: 1.5rem;
+  }
+  .image-block p {
+    font-size: 1rem;
+  }
+}
+
+/*  Sermon section Responsiveness */
+@media (max-width: 768px) {
+  .sermons-hero h1 {
+    font-size: 2rem;
+  }
+  .sermons-hero p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .sermons-hero {
+    height: 60vh;
+  }
+  .sermons-hero h1 {
+    font-size: 1.6rem;
+  }
+  .sermons-hero p {
+    font-size: 0.9rem;
+  }
+}
+
+/* About us Responsiveness */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    order: -1; /* Image first on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero.about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero.about-hero p {
+    font-size: 1.2rem;
+  }
 }
