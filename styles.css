@@ -940,6 +940,7 @@
   
     .nav-toggle {
       display: block;
+      margin-left: auto;
     }
   }
   /* ================================
