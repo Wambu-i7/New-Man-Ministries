@@ -137,7 +137,7 @@
   overflow: hidden;
 
   /* background image */
-  background: url('images/gallery3.jpg') no-repeat center center/cover;
+  background: url('images/vision.jpg') no-repeat center center/cover;
 
 }
 
@@ -162,17 +162,8 @@
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #e6b800; 
+  color: black; 
   font-weight: 700;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #eee;
 }
 
 .image-row {
@@ -192,11 +183,11 @@
   .left-info p {
     margin: 8px 0;
     text-align: center;
-    color: #eee;
+    color: black;
     font-size:x-large;
   }
   .left-info h3 {
-    color: #e6b800;
+    color: #e75b09;
     font-size: 25px;
   }
   .left-info h2 {
@@ -204,7 +195,7 @@
     font-size: 35px;
   }
   .right-info p {
-    color: #eee;
+    color: black;
     font-size: 30px;
   }
   
@@ -320,7 +311,7 @@
 }
 
 .hero-btn:hover {
-  background: #c89a06;
+  background: blueviolet;
 }
 .sermons-section {
   padding: 4rem 2rem;
@@ -384,7 +375,8 @@
 }
 
 .sermon-btn:hover {
-  background: #c89a06;
+  background: blueviolet;
+  color: white;
 }
 
 /* Ministries sections */
@@ -493,7 +485,7 @@
   
   /* --- About Us Page Styles --- */
 .about-hero {
-  background: url("images/aboutus.jpg") center/cover no-repeat;
+  background: url("images/about.jpg") center/cover no-repeat;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -834,7 +826,7 @@
   justify-content: center;
   align-items: flex-start;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto;
   text-align: left;
 }
 
