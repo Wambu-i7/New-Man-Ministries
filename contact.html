@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact  | Newman Ministry International</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  
+  <header>
+    <div class=" container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Church Logo" class="logo-img">
+      <span class="logo-text">Newman Ministries Contact</span>
+    </a>
+    <button id="navToggle" class="nav-toggle">☰</button>
+    <nav>
+    <ul id="navMenu" class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <!-- Dropdown starts here -->
+          <li class="dropdown">
+            <a href="ministries.html">Ministries ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="ministries.html#youth-ministry">Youth Ministry</a></li>
+              <li><a href="ministries.html#children-ministry">Children’s Ministry</a></li>
+              <li><a href="ministries.html#womens-ministry">Women’s Ministry</a></li>
+              <li><a href="ministries.html#mens-ministry">Men’s Ministry</a></li>
+              <li><a href="ministries.html#music-ministry">Music Ministry</a></li>
+              <li><a href="ministries.html#outreach-ministry">Outreach Ministry</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="about.html">About Us ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="about.html#vision">Our Vision</a></li>
+            <li><a href="about.html#mission">Our Mission</a></li>
+            <li><a href="about.html#values">Core Values</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Hero section-->
+  <!-- Sermons Hero Section -->
+<section class="page-hero contact-hero">
+  <div class="hero-overlay">
+    <h1>Get in touch with us!</h1>
+    <p>Contact us, get to know more about us, share testimonies, join our ministries or just tell us something you would love us to know.</p>
+    <a href="#contact" class="hero-btn">Contact Us</a>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-details">
+    <div class="contact-info">
+      <h3>Our Location</h3>
+      <p>Newman Ministries Grounds</p>
+      <p>Off Gikambura Road, Opposite Shell Petro Station, Nairobi, Kenya</p>
+      <p>Phone: +254 799841105</p>
+      <p>Email: newmanministriesintl@gmail.com</p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <form action="https://formsubmit.co/newmanministriesintl@gmail.com" method="POST">
+
+        <!--Form fields-->
+        <input type="text" name="Name"  placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
+
+         <!--Disable captcha-->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!--Redirect after successful submission-->
+        <input type="hidden" name="_next" value="https://wambu-i7.github.io/New-Man-Ministries/thankyou.html">
+
+
+        <!--Submit button-->
+        <button type="submit">Send Message</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Newman Ministry International. All rights reserved.</p>
+  </footer>
+
+  <!-- Nav Toggle Script (same as other pages) -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    // Function to toggle menu
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Function to close menu
+    function closeMenu() {
+      navMenu.classList.remove('show');
+    }
+
+    // Function to handle both clicks and touches outside the nav
+    function handleOutsideInteraction(event) {
+      const isInsideNav = navMenu.contains(event.target);
+      const isOnToggle = navToggle.contains(event.target);
+
+      if (!isInsideNav && !isOnToggle) {
+        closeMenu();
+      }
+    }
+
+    // Attach both click and touchstart listeners in one go
+    ['click', 'touchstart'].forEach(evt =>
+      document.addEventListener(evt, handleOutsideInteraction)
+    );
+
+    document.addEventListener('scroll', closeMenu, { passive: true });
+
+  </script>
+</body>
+</html>
+

@@ -664,10 +664,43 @@
   /* =======================
    Church Gallery Section
 ======================= */
+.gallery-hero {
+  background: url("images/backgroundgall.jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.gallery-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+.gallery-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
 .church-gallery {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: peachpuff;
 }
 
 .church-gallery h2 {
@@ -785,7 +818,56 @@
     padding: 0 10px;
   }
 }
+/* Contact Section */
 
+.contact-hero {
+  background: url("images/contact-us.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.contact-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.hero-btn {
+  background: #e2b007; /* warm golden color */
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background: #0c0fe2;
+}
 
 .contact-section {
   padding: 30px 20px;
