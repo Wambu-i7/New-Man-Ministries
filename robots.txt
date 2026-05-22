@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wambu-i7.github.io/New-Man-Ministries/sitemap.xml
